@@ -52,6 +52,18 @@
             <div class="title m-b-md">
                 Tasks List
             </div>
+            @foreach($tasks as$key =>$task)
+            <tr>
+                <td scope="row">{{ ++$key }}</td>
+                <td>{{ $task->title }}</td>
+                <td>{{ $task->content }}</td>
+                <td>{{ $task->created_at }}</td>
+                <td>{{ $task->due_date }}</td>
+                <td>
+                    <img src="{{ asset('storage/images/' . $task->image) }}" alt="" style="width: 150px">
+                </td>
+            </tr>
+            @endforeach
 
 
 

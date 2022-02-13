@@ -46,5 +46,8 @@ class TasksTableSeeder extends Seeder
         $task->due_date = "2018-09-26";
         $task->image  = "";
         $task->save();
+
+
+        
     }
 }
