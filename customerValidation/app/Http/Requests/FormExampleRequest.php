@@ -29,16 +29,16 @@ class FormExampleRequest extends FormRequest
         ];
     }
 
-    public function message()
+    public function messages()
     {
-        $messages = [
-            'name.required' => 'We need to know your full name!',
+        return [
+            'name.required' => 'Vui lòng nhập tên',
             'name.min' => 'Name size must be between 2 and 30!',
             'name.max' => 'Name size must be between 2 and 30!',
-            'age.required' => 'We need to know your age!',
+            'age.required' => 'Vui lòng nhập tuổi',
             'age.numeric' => 'Age under validation must be numeric',
             'age.min' => 'Age must be on 18!',
         ];
-        return $messages;
+       
     }
 }

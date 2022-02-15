@@ -21,29 +21,32 @@
                 Laravel Cusstom Validation
             </div>
             <br>
-            <br>
 
             <div class="form-custom-validation">
-
                 <form action="{{ route('form.submit') }}" method="GET">
-                    <div class="error-message">
-                        @if ($errors->any())
-                        @foreach($errors->all() as $nameError)
-                        <p style="color:red">{{ $nameError }}</p>
-                        @endforeach
-                        @endif
-                    </div>
+
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" class="form-control" id="name" name="name"  placeholder="Nhập tên">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Nhập tên">
+                        <div class="error-message">
+                            @if ($errors->any())
+                            <p style="color:red">{{ $errors->first('name') }}</p>
+                            @endif
+                        </div>
+
                     </div>
 
-                     <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" id="age" name="age"  placeholder="Nhập tuổi">
+                    <div class="form-group">
+                        <label>Age</label>
+                        <input type="text" class="form-control" id="age" name="age" placeholder="Nhập tuổi">
+                        <div class="error-message">
+                            @if ($errors->any())
+                            <p style="color:red">{{ $errors->first('age') }}</p>
+                            @endif
+                        </div>
                     </div>
                     <p style='color:green'>{{ (isset($success)) ? $success : '' }}</p>
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
@@ -52,17 +55,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
