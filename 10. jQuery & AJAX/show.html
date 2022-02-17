@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>show demo</title>
+  <style>
+  div {
+    background: #def3ca;
+    margin: 3px;
+    width: 80px;
+    display: none;
+    float: left;
+    text-align: center;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<button id="showr">Show</button>
+<button id="hidr">Hide</button>
+<div><img
+    src="http://duongbo.vn/data/data/ductt/20140808-chumanhthanthuong9.jpg"
+></div>
+<div><img
+    src="http://imgs.vietnamnet.vn/Images/vnn/2014/07/12/11/20140712112435-thu-lon.jpg"
+></div>
+<div><img
+    src="http://imgs.vietnamnet.vn/Images/vnn/2014/07/12/11/20140712112436-anh-choi-010.jpg"
+></div>
+<div><img
+    src="http://duongbo.vn/data/data/ductt/20140808-chumanhthanthuong7.jpg"
+></div>
+ 
+<script>
+$( "#showr" ).click(function() {
+  $( "div" ).first().show( "fast", function showNext() {
+    $( this ).next( "div" ).show( "fast", showNext );
+    
+  });
+});
+ 
+$( "#hidr" ).click(function() {
+  $( "div" ).hide( 1000 );
+});
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("img").hide();
+    });
+    $("#show").click(function(){
+        $("img").show();
+    });
+});
+</script>
+</head>
+<body>
+<!-- <p>If you click on the "Hide" button, I will disappear.</p> -->
+<img src="https://dbk.vn/uploads/ckfinder/images/tin-tuc-1/anh-ma-kinh-di-14.jpg"
+style="width: 1200px;  height: 600px;"/>
+<button id="hide" style="background: chartreuse;">
+    <h1>Bỏ qua</h1>
+</button><br>
+<button id="show" style="background: red;">
+    <h1>
+        Xem 
+    </h1>
+</button><br>
+<form action="https://www.facebook.com/photo/?fbid=2279768512169920&set=a.101266896686770">
+    <button id="show" style="background: rgb(180, 197, 24);">
+        <h1>
+            Xem 
+        </h1>
+    </button><br><br>
+    <input type="text">
+
+</form>
+</body>
+</html>

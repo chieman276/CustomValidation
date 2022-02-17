@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="checkAll">Chọn tất cả</button><br>
+
+    <input type="checkbox" class="cbk"> 1 <br>
+    <input type="checkbox" class="cbk"> 2 <br>
+    <input type="checkbox" class="cbk"> 3 <br>
+    <input type="checkbox" class="cbk"> 4 <br>
+    <input type="checkbox" class="cbk"> 5 <br>
+    <input type="checkbox" class="cbk"> 6 <br>
+    <input type="checkbox" class="cbk"> 7 <br>
+    <input type="checkbox" class="cbk"> 8 <br>
+
+    <script>
+        $(document).ready(function () {
+            $('#checkAll').click(function () {
+                $('.cbk').each(function (key, val) {
+                    if (key % 2 == 0) {
+                        $(val).prop('checked', true);
+                    }
+                });
+            })
+        })
+
+    </script>
+</body>
+
+</html>
